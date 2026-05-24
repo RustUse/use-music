@@ -1,0 +1,93 @@
+[workspace]
+members = [
+    "crates/use-music",
+    "crates/use-note",
+    "crates/use-pitch",
+    "crates/use-interval",
+    "crates/use-scale",
+    "crates/use-mode",
+    "crates/use-key",
+    "crates/use-chord",
+    "crates/use-rhythm",
+    "crates/use-meter",
+    "crates/use-tempo",
+    "crates/use-dynamics",
+    "crates/use-articulation",
+    "crates/use-notation",
+    "crates/use-midi",
+    "crates/use-tuning",
+]
+resolver = "2"
+
+[workspace.package]
+authors = ["RustUse Contributors"]
+edition = "2024"
+homepage = "https://rustuse.org"
+license = "MIT OR Apache-2.0"
+documentation = "https://rustuse.org"
+publish = false
+readme = "README.md"
+repository = "https://github.com/RustUse/use-music"
+rust-version = "1.95.0"
+version = "0.0.1"
+
+[workspace.dependencies]
+use-note = { version = "0.0.1", path = "crates/use-note" }
+use-pitch = { version = "0.0.1", path = "crates/use-pitch" }
+use-scale = { version = "0.0.1", path = "crates/use-scale" }
+use-mode = { version = "0.0.1", path = "crates/use-mode" }
+use-key = { version = "0.0.1", path = "crates/use-key" }
+use-chord = { version = "0.0.1", path = "crates/use-chord" }
+use-rhythm = { version = "0.0.1", path = "crates/use-rhythm" }
+use-meter = { version = "0.0.1", path = "crates/use-meter" }
+use-tempo = { version = "0.0.1", path = "crates/use-tempo" }
+use-dynamics = { version = "0.0.1", path = "crates/use-dynamics" }
+use-articulation = { version = "0.0.1", path = "crates/use-articulation" }
+use-notation = { version = "0.0.1", path = "crates/use-notation" }
+use-midi = { version = "0.0.1", path = "crates/use-midi" }
+use-tuning = { version = "0.0.1", path = "crates/use-tuning" }
+use-interval = { package = "use-music-interval", version = "0.0.1", path = "crates/use-interval" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+cargo = { level = "warn", priority = -1 }
+expect_used = "allow"
+float_cmp = "allow"
+missing_const_for_fn = "allow"
+missing_panics_doc = "allow"
+missing_errors_doc = "allow"
+doc_markdown = "allow"
+module_name_repetitions = "allow"
+must_use_candidate = "allow"
+multiple_crate_versions = "allow"
+return_self_not_must_use = "allow"
+nursery = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+todo = "deny"
+unimplemented = "deny"
+unwrap_used = "warn"
+
+[workspace.metadata.rustuse.release]
+publish = false
+versioning = "lockstep-0.x"
+first-publish-candidates = [
+    "use-note",
+    "use-pitch",
+    "use-music-interval",
+    "use-scale",
+    "use-mode",
+    "use-key",
+    "use-chord",
+    "use-rhythm",
+    "use-meter",
+    "use-tempo",
+    "use-dynamics",
+    "use-articulation",
+    "use-notation",
+    "use-midi",
+    "use-tuning",
+    "use-music",
+]

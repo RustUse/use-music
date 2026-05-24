@@ -1,0 +1,43 @@
+[package]
+name = "use-music"
+description = "Composable symbolic music primitive facade for RustUse."
+publish = true
+autoexamples = false
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-music"
+keywords = ["music", "metadata", "facade"]
+categories = ["data-structures", "no-std::no-alloc"]
+
+[dependencies]
+use-note.workspace = true
+use-pitch.workspace = true
+use-interval.workspace = true
+use-scale.workspace = true
+use-mode.workspace = true
+use-key.workspace = true
+use-chord.workspace = true
+use-rhythm.workspace = true
+use-meter.workspace = true
+use-tempo.workspace = true
+use-dynamics.workspace = true
+use-articulation.workspace = true
+use-notation.workspace = true
+use-midi.workspace = true
+use-tuning.workspace = true
+
+[[example]]
+name = "music_basic_usage"
+path = "examples/basic_usage.rs"
+
+[lints]
+workspace = true
+
+[package.metadata.docs.rs]
+all-features = true

@@ -1,0 +1,100 @@
+[workspace]
+release = false
+release_always = false
+changelog_update = false
+pr_labels = ["release"]
+max_analyze_commits = 2000
+
+[[package]]
+name = "use-note"
+release = true
+version_group = "rustuse-music"
+
+[[package]]
+name = "use-pitch"
+release = true
+version_group = "rustuse-music"
+
+[[package]]
+name = "use-music-interval"
+release = true
+version_group = "rustuse-music"
+
+[[package]]
+name = "use-scale"
+release = true
+version_group = "rustuse-music"
+
+[[package]]
+name = "use-mode"
+release = true
+version_group = "rustuse-music"
+
+[[package]]
+name = "use-key"
+release = true
+version_group = "rustuse-music"
+
+[[package]]
+name = "use-chord"
+release = true
+version_group = "rustuse-music"
+
+[[package]]
+name = "use-rhythm"
+release = true
+version_group = "rustuse-music"
+
+[[package]]
+name = "use-meter"
+release = true
+version_group = "rustuse-music"
+
+[[package]]
+name = "use-tempo"
+release = true
+version_group = "rustuse-music"
+
+[[package]]
+name = "use-dynamics"
+release = true
+version_group = "rustuse-music"
+
+[[package]]
+name = "use-articulation"
+release = true
+version_group = "rustuse-music"
+
+[[package]]
+name = "use-notation"
+release = true
+version_group = "rustuse-music"
+
+[[package]]
+name = "use-midi"
+release = true
+version_group = "rustuse-music"
+
+[[package]]
+name = "use-tuning"
+release = true
+version_group = "rustuse-music"
+
+[[package]]
+name = "use-music"
+release = true
+version_group = "rustuse-music"
+
+[changelog]
+header = """# Changelog
+
+## Unreleased
+"""
+protect_breaking_commits = true
+sort_commits = "oldest"
+commit_parsers = [
+    { message = "^feat(?:\\([^)]+\\))?!?: .+", group = "Added" },
+    { message = "^fix(?:\\([^)]+\\))?!?: .+", group = "Fixed" },
+    { message = "^docs(?:\\([^)]+\\))?!?: .+", group = "Documentation" },
+    { message = "^.*", group = "Changed" },
+]
